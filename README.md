@@ -2,6 +2,8 @@
 ## Demo
 https://formbuilderwix.herokuapp.com/
 ## Installation
+### make sure you have python installed
+
 1. Clone this repository
 
 ```bash
