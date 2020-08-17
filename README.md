@@ -19,4 +19,4 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-3. Go to 10.0.0.127:8000
+3. Go to 127.0.0.1:8000
