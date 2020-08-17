@@ -26,7 +26,7 @@ else:
     SECRET_KEY = 'MYSECRET'
 
 if ENV == 'PRODUCTION':
-    DEBUG = False
+    DEBUG = True
 else:
     DEBUG = True
 
