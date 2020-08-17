@@ -76,7 +76,7 @@ LOGGING = {
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(PROJECT_APP_PATH, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'Formy/templates/formy')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

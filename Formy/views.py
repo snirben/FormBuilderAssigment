@@ -7,11 +7,11 @@ from Formy.models import Form, Field, FormAnswer, FormAnswerFieldData
 
 def home(request):
     forms = Form.objects.all()
-    return render(request, "Formy/FormList.html", {"forms": forms})
+    return render(request, "formy/FormList.html", {"forms": forms})
 
 
 def newFormPage(request):
-    return render(request, "Formy/NewForm.html", {})
+    return render(request, "formy/NewForm.html", {})
 
 
 def newForm(request):
