@@ -58,5 +58,4 @@ def submissionsForm(request, pk):
     answers=[]
     for answer in answerslug:
         answers.append([FormAnswerFieldData.objects.filter(formanswer=answer)])
-    print(answers)
     return render(request, "formy/ViewForm.html", {"answers": answers,"titles":titles, "form": form})

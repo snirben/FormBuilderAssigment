@@ -32,7 +32,6 @@ var addfield = function (type, inputname, fieldlabel) {
 var ajaxSubmit = function (data) {
 
     data["form_name"] = $("#form_name").text()
-    console.log(JSON.stringify(data))
     // var csrf_token = $("[name='csrfmiddlewaretoken']").val();
     // ajax form submit
     $.ajax({
@@ -60,7 +59,6 @@ var ajaxSubmitform = function () {
         data["input"].push({"id": $(this).attr("val"),"name":$(this).attr("name"), "input": $(this).val(), "type": $(this).attr("type")})
     })
     data["formid"]=$(".form_title").attr("value")
-    console.log(JSON.stringify(data))
      var csrf_token = $("[name='csrfmiddlewaretoken']").val();
     // ajax form submit
     $.ajax({
