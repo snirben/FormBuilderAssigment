@@ -1,0 +1,39 @@
+{% extends 'formy/home.html' %}
+{% load static %}
+{% block content %}
+    <div class="card shadow p-3 mb-5 bg-white rounded">
+        <div class="card-body ">
+            <h1 class="form_title" value="{{ form.id }}"> {{ form.formname }}</h1>
+
+            <table class="table m-5">
+                <thead>
+                <tr>
+                    {% for title in titles %}
+                        <th scope="col">{{ title.name }}</th>
+                    {% endfor %}
+                </tr>
+                </thead>
+                <tbody>
+                {% for answer in answers %}
+                    {% for ans in answer %}
+
+                        <tr>
+                            {% for a in ans %}
+                                {% if a.type == "color" %}
+                                    <td style="background-color:{{ a.value }} "></td>
+
+                                {% else %}
+                                <td>{{ a.value }}</td>
+                             {% endif %}
+
+                            {% endfor %}
+
+                        </tr>
+
+                    {% endfor %}
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock content %}

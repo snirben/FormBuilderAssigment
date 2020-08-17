@@ -1,0 +1,57 @@
+{% extends 'formy/home.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+<div class="card m-5 ">
+<h3 class="d-flex justify-content-center"> Field Wizard</h3>
+    <div class="d-flex form-row justify-content-center m-3">
+
+        <div class="form-group col-md-4">
+            <label for="inputLabel">Label</label>
+            <input type="text" class="form-control" id="inputLabel">
+        </div>
+
+        <div class="form-group col-md-2">
+            <label for="inputName">Input Name</label>
+            <input type="text" class="form-control" id="inputName">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputType">Field Type</label>
+            <select id="inputType" class="form-control">
+                <option selected>Choose...</option>
+                <option value="text">Text</option>
+                <option value="color">Color</option>
+                <option value="date">date</option>
+                <option value="email">email</option>
+                <option value="tel">tel</option>
+                <option value="number">number</option>
+            </select>
+        </div>
+    </div>
+<div class="form-group d-flex justify-content-center">
+            <button id="add-new-field" class="btn btn-primary">Add Field</button>
+        </div>
+</div>
+
+    <div class="card shadow p-3 mb-5 bg-white rounded m-5">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div id="form_build">
+            <div class="d-flex justify-content-center">
+            <h3 class="d-flex justify-content-center" style="background: #eee;border-radius: 5px; width: 340px;" id="form_name" contenteditable="true">Untitled</h3>
+            <small class="m-0 d-flex">Click on Untitled to edit form name</small>
+</div>
+            <div id="form-area" class="col-md-6">
+
+            </div>
+        </div>
+
+    </form>
+    <button type="" class="btn btn-success create-form mt-5">Create My Form</button>
+
+    </div>
+
+{% endblock content %}
