@@ -2,14 +2,6 @@ from django.db import models
 
 # Create your models here.
 
-######################################################################
-#                                                                    #
-#   Each of the models are implemented as abstract to allow for      #
-#   subclassing. Default concrete implementations are then defined   #
-#   at the end of this module.                                       #
-#                                                                    #
-######################################################################
-
 
 
 class Form(models.Model):
