@@ -3,7 +3,19 @@
 
 
 $(document).ready( function () {
-    $('#form_list').DataTable();
+    $('#form_list').DataTable({
+         rowReorder: {
+            selector: 'td:nth-child(2)'
+        },
+        responsive: true
+    });
+
+    $('#submissionstable').DataTable({
+         rowReorder: {
+            selector: 'td:nth-child(2)'
+        },
+        responsive: true
+    });
 } );
 
 

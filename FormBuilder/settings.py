@@ -11,20 +11,25 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-
+ENV = os.environ.get('ENV', 'DEVELOPMENT')
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '6%h!lsmnuf57lvrg61h422a4ca)l8f=w&topph0aoq^u*0@8ul'
-
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if ENV == 'PRODUCTION':
+    SECRET_KEY = os.environ.get('SECRET_KEY')
+else:
+    SECRET_KEY = 'MYSECRET'
 
-ALLOWED_HOSTS = []
+if ENV == 'PRODUCTION':
+    DEBUG = False
+else:
+    DEBUG = True
+
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
