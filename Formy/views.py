@@ -32,7 +32,7 @@ def newForm(request):
 def submitFormPage(request, pk):
     form = Form.objects.get(id=pk)
     fields = Field.objects.filter(form=form)
-    return render(request, "Formy/SubmitForm.html", {"fields": fields, "form": form})
+    return render(request, "formy/SubmitForm.html", {"fields": fields, "form": form})
 
 
 def submitForm(request):
@@ -59,4 +59,4 @@ def submissionsForm(request, pk):
     for answer in answerslug:
         answers.append([FormAnswerFieldData.objects.filter(formanswer=answer)])
     print(answers)
-    return render(request, "Formy/ViewForm.html", {"answers": answers,"titles":titles, "form": form})
+    return render(request, "formy/ViewForm.html", {"answers": answers,"titles":titles, "form": form})
